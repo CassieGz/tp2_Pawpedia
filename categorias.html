@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pawpedia</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/png" href="./favicon-huella.png" />
+  </head>
+  <body class="bg-light">
+    <header>
+      <nav class="nav">
+        <div
+          class="container d-flex align-items-center justify-content-between nav-div"
+        >
+          <a
+            class="navbar-brand text-white fw-bold d-flex align-items-center"
+            href="#"
+          >
+            <img
+              class="me-2"
+              src="./logo_huella.svg"
+              alt="logo-huella"
+              width="160px"
+            />
+          </a>
+          <ul class="navbar-nav flex-row gap-3">
+            <li class="nav-item">
+              <a class="nav-link text-white fw-bold" href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fw-bold" href="#">Categorías</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="container my-5">
+      <h1 class="titulo text-center">Razas por categorías</h1>
+      <h4 class="text-muted">Búsqueda por nombre,origen o temperamento</h4>
+
+      <!-- Input search por nombre,origen,temperamento -->
+      <div class="row mb-4 filtros">
+        <div class="col-md-6">
+          <input
+            type="text"
+            id="buscador"
+            class="form-control"
+            placeholder="Labrador..."
+          />
+        </div>
+
+        <!-- Filtro por tamaño -->
+        <div class="col-md-6">
+          <label for="ordenar"></label>
+          <select id="ordenar" title="ordenar" class="form-select">
+            <option value="">--Filtrar por tamaño--</option>
+            <option value="pequeño">Pequeño: Hasta 35cm</option>
+            <option value="mediano">Mediano:Entre 36-60cm</option>
+            <option value="grande">Grande: Más de 60cm</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Manipulacion del DOM -->
+      <div id="listaRazas" class="row row-cols-1 row-cols-md-3 g-4"></div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="mb-0">Pawpedia&copy;2025</p>
+      </div>
+    </footer>
+
+    <!-- js -->
+    <script type="module" src="./src/categorias.js"></script>
+  </body>
+</html>

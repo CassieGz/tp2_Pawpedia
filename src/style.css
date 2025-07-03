@@ -1,0 +1,135 @@
+:root {
+  font-family: "Quicksand", sans-serif;
+  --p-color: #f8f9fa;
+  --s-color: #ffe066;
+  --t-color: #0cb7f2;
+  --q-color: #fa3939;
+  --f-color: #212529;
+}
+
+body {
+  background-color: var(--p-color);
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.titulo {
+  font-family: "Chewy", sans-serif;
+  color: var(--q-color);
+  text-align: center;
+  font-size: xx-large;
+}
+
+.logo {
+  width: 160px;
+  height: 160px;
+  padding: 1.5em;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em var(--s-color));
+}
+
+button {
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  padding: 10px;
+  transition: border-color 0.25s;
+  margin: 15px 0;
+}
+
+.boton {
+  background-color: var(--t-color);
+  color: var(--p-color);
+  border: none;
+}
+
+.boton:hover {
+  background-color: var(--s-color);
+  color: var(--q-color);
+  font-weight: bold;
+  border-style: none;
+}
+
+div {
+  padding: 10px;
+}
+
+nav,
+footer {
+  background-color: var(--t-color);
+  color: var(--p-color);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+section,
+h1,
+h2,
+h3 {
+  padding: 10px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ficha {
+  padding: 20px 0;
+}
+
+footer p {
+  font-weight: bold;
+  text-align: center;
+  padding: 25px 0;
+}
+
+hr {
+  border: none;
+}
+/* --------------- PAGINA CATEGORIAS --------------- */
+
+.filtros {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+#listaRazas {
+  min-height: 400px;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* --------------- MEDIA QUERIES --------------- */
+@media (min-width: 300px) and (max-width: 767px) {
+  .nav-div {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
