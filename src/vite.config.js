@@ -8,6 +8,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 export default defineConfig({
   //define que va a usar mpa
   appType: "mpa",
+  base: "./", 
   build: {
     rollupOptions: {
       input: {
