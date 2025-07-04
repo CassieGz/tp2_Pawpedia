@@ -10,8 +10,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "src/pages/index.html"),
-        categorias: resolve(__dirname, "src/pages/categorias.html"),
+        main: resolve(__dirname, "index.html"),
+        categorias: resolve(__dirname, "categorias.html"),
       },
     },
   },

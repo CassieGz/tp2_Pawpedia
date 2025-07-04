@@ -1,3 +1,4 @@
+import "../css/style.css";
 export function rangoAltura(height) {
   if (!height) return "Desconocido";
   const partes = height.split(" - ").map(Number);
