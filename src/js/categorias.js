@@ -1,4 +1,5 @@
-import { rangoAltura, debounce } from "./global.js";
+import "../css/style.css";
+import { rangoAltura, debounce } from "../js/global";
 
 const API_URL = "https://api.thedogapi.com";
 
@@ -21,7 +22,7 @@ async function getImageUrlById(imageId) {
 
 async function getAllRazasConImagen() {
   try {
-    const res = await fetch(API_URL+"/v1/breeds");
+    const res = await fetch(API_URL + "/v1/breeds");
     if (!res.ok) throw new Error("Error al obtener razas");
     const data = await res.json();
 
@@ -117,6 +118,3 @@ function aplicarFiltros() {
 
 busquedaRazas.addEventListener("input", debounce(aplicarFiltros, 400));
 ordenarXTamanio.addEventListener("change", aplicarFiltros);
-
-
-

@@ -1,4 +1,4 @@
-import "./style.css";
+import "../css/style.css";
 
 const API_URL = "https://api.thedogapi.com/";
 
@@ -8,11 +8,8 @@ const botonRandom = document.getElementById("regenerar");
 const randomDiv = document.getElementById("fichaPerro");
 const botonFicha = document.getElementById("generar");
 
-
-
 async function getPerritosRandom() {
   try {
-    
     // Hago una peticion de TODAS las imagenes
     const res = await fetch(API_URL + "v1/images/search");
     const data = await res.json();
